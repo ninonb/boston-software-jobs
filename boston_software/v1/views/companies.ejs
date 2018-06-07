@@ -1,0 +1,9 @@
+<%  include partials/header %>
+<h1>This is the companies page.</h1>
+
+<% for(var i = 0; i < companies.length; i++){ %>
+<div class="card-header"> <h4> <%= companies[i].name %> </h4> </div>
+<div class="card-body"> <img src = "<%= companies[i].image %>"> </div> 
+<% } %>
+
+<% include partials/footer %>
