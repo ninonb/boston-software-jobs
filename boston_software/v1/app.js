@@ -22,11 +22,11 @@ app.get('/companies/new', (req, res) =>{
   res.render("newCompany");
 })
 
-app.post('/companies', (req,res)=>{
-  var name = req.body.name;
-  var image = req.body.image;
-  companiesVar.push({name, image});
-  res.send("You hit the POST route!");
+app.post('/companies', (req, res)=>{
+ var name = req.body.name;
+ var image = req.body.logo;
+ companiesArray.push({name:name,image:image});
+ res.redirect('companies');
 })
 
 app.listen(3000, () => console.log('Listening from app...'))

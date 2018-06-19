@@ -1,9 +1,41 @@
 <%  include partials/header %>
-<h1>This is the companies page.</h1>
+<nav class="navbar navbar-default">
+  <div class = "container-fluid">
+    <div class = "navbar-header">
+        <a class= 'navbar-brand' href="/">BostonSWJobs</a>
+    <div class = "collapse navbar-collapse">
+      <ul class = "nav navbar-nav navbar-right">
+        <li> <a href="/"> Login </a> </li>
+        <li> <a href="/"> Sign up </a> </li>
+        <li> <a href="/"> Logout </a> </li>
+      </ul>
+    </div>
+   </div>
+  </div>
+</nav>
 
-<% for(var i = 0; i < companies.length; i++){ %>
-<div class="card-header"> <h4> <%= companies[i].name %> </h4> </div>
-<div class="card-body"> <img src = "<%= companies[i].image %>"> </div> 
+<header class="jumbotron">  
+  <div>
+  <h1>Boston's software employers</h1>  
+  <p>
+  Following is a list of the top 100 employers of software developers in the Boston area.
+  </p>
+  <a href="/companies/new" class="btn btn-primary btn-large">Add a company</a>
+  </div>
+</header>  
+
+<div class="container">
+     
+<div class = "row">
+    <% for(var i = 0; i < companies.length; i++){ %>
+ <div class= "col-md-3 col-sm-6">
+    
+ <div class="thumbnail"><img src = "<%= companies[i].image %>"> </div>
+ <div class="caption"><h4> <%= companies[i].name %> </h4> </div>
+    
+ </div>
 <% } %>
+</div>
+</div>
 
 <% include partials/footer %>

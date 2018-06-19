@@ -1,12 +1,15 @@
 <% include partials/header %>
 
 <h1>Create a new company</h1>
-<form action="/companies" method="POST">
-  Company name:<br>
-  <input type="text" name="name"><br>
-  Logo URL:<br>
-  <input type="text" logo="logo">
-  <input type="submit" value="Submit">
-</form>
+<div class="row" width="30%" margins="auto">
+  <form action="/companies" method="POST">
+    Company name:<br>
+    <input type="text" name="name" placeholder="company name" class="form-control"><br>
+    Logo URL:<br>
+    <input type="text" name="logo" placeholder="logo URL" class="form-control"><br>
+    <input type="submit" value="Submit" class= "btn btn-large btn-default">
+  </form>
+</div>
+
 
 <% include partials/footer %>
